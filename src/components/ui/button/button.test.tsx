@@ -76,7 +76,7 @@ describe('Button', () => {
     it('applies icon size classes', () => {
       render(<Button size="icon">🔍</Button>);
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('w-9');
+      expect(button).toHaveClass('size-9');
     });
   });
 
