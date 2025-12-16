@@ -26,6 +26,7 @@ export default defineConfig({
     timeout: 120 * 1000,
   },
   snapshotDir: './e2e/__snapshots__',
+  snapshotPathTemplate: '{snapshotDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}',
   expect: {
     toHaveScreenshot: {
       maxDiffPixels: 100,
