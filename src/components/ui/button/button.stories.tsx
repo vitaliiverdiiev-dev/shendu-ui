@@ -70,13 +70,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-
 export const Default: Story = {
   args: {
     children: 'Button',
   },
 };
-
 
 export const Destructive: Story = {
   args: {
@@ -99,14 +97,12 @@ export const Secondary: Story = {
   },
 };
 
-
 export const Ghost: Story = {
   args: {
     variant: 'ghost',
     children: 'Ghost',
   },
 };
-
 
 export const Link: Story = {
   args: {
@@ -143,14 +139,12 @@ export const Disabled: Story = {
   },
 };
 
-
 export const Loading: Story = {
   args: {
     isLoading: true,
     children: 'Submit',
   },
 };
-
 
 export const AllVariants: Story = {
   render: () => (

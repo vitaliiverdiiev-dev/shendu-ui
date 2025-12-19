@@ -129,7 +129,7 @@ export const Controlled: Story = {
           visible={visible}
           onVisibilityChange={setVisible}
         />
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           Password is {visible ? 'visible' : 'hidden'}
         </p>
       </div>

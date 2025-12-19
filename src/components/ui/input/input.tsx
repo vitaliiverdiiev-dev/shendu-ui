@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import {
   inputVariants,
@@ -10,15 +9,7 @@ import {
   ICON_CONTAINER_STATIC,
   type InputSize,
 } from './input.variants';
-
-export type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> &
-  VariantProps<typeof inputVariants> & {
-    leftIcon?: React.ReactNode;
-    rightIcon?: React.ReactNode;
-    wrapperClassName?: string;
-    isError?: boolean;
-    isSuccess?: boolean;
-  };
+import type { InputProps } from './input.types';
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -28,6 +19,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       size,
       leftIcon,
       rightIcon,
+      rightElement,
       wrapperClassName,
       isError,
       isSuccess,
@@ -37,12 +29,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
     ref
   ) => {
-    const hasIcons = leftIcon || rightIcon;
+    const hasWrapper = leftIcon || rightIcon || rightElement;
     const iconWidth = getIconContainerWidth(size as InputSize);
 
     const iconPadding = cn(
       leftIcon && getIconPadding('left', size as InputSize),
-      rightIcon && getIconPadding('right', size as InputSize)
+      (rightIcon || rightElement) && getIconPadding('right', size as InputSize)
     );
 
     const inputElement = (
@@ -51,7 +43,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         data-slot="input"
         className={cn(
           inputVariants({ size }),
-          hasIcons && iconPadding,
+          hasWrapper && iconPadding,
           getStateStyles(isError, isSuccess),
           className
         )}
@@ -62,7 +54,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       />
     );
 
-    if (!hasIcons) {
+    if (!hasWrapper) {
       return inputElement;
     }
 
@@ -77,14 +69,21 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           </span>
         )}
         {inputElement}
-        {rightIcon && (
-          <span
-            className={cn(ICON_CONTAINER_STATIC, 'right-0', iconWidth, disabled && 'opacity-50')}
-            aria-hidden="true"
-          >
-            {rightIcon}
-          </span>
-        )}
+        {rightElement
+          ? rightElement
+          : rightIcon && (
+              <span
+                className={cn(
+                  ICON_CONTAINER_STATIC,
+                  'right-0',
+                  iconWidth,
+                  disabled && 'opacity-50'
+                )}
+                aria-hidden="true"
+              >
+                {rightIcon}
+              </span>
+            )}
       </div>
     );
   }

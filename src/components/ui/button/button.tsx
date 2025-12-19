@@ -1,25 +1,28 @@
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from './button.variants';
 import { Spinner } from '../spinner';
-
-export type ButtonProps
-  = React.ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonVariants> & {
-  asChild?: boolean;
-  isLoading?: boolean;
-  loadingLabel?: string;
-};
+import type { ButtonProps } from './button.types';
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant, size, asChild = false, isLoading = false, loadingLabel, children,  disabled,  ...props },
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      isLoading = false,
+      loadingLabel,
+      children,
+      disabled,
+      ...props
+    },
     ref
   ) => {
     const Comp = asChild ? Slot : 'button';
     const loadingLabelText = loadingLabel === '' ? undefined : loadingLabel || 'Loading...';
-    
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}

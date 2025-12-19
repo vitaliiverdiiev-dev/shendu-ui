@@ -12,17 +12,22 @@ This theming system is designed specifically for **data-intensive applications**
 ## Core Principles
 
 ### 1. Semantic Naming
+
 All color tokens are named based on **purpose**, not appearance. For example:
+
 - ✅ `--content-foreground` (describes usage)
 - ❌ `--gray-900` (describes appearance)
 
 ### 2. Brand ≠ UI Intent
+
 **Brand colors** are reserved for:
+
 - Logo
 - Top-level navigation emphasis
 - Marketing touchpoints
 
 **Brand colors are NOT used for:**
+
 - Tables
 - Forms
 - Status indicators
@@ -32,13 +37,16 @@ All color tokens are named based on **purpose**, not appearance. For example:
 This separation ensures brand identity doesn't interfere with functional UI patterns.
 
 ### 3. Intent Colors Are Reusable
+
 Each intent color (Success, Warning, Error, Info) includes:
+
 - Main color
 - Background variant
 - Border variant
 - Foreground/text variant
 
 This allows consistent use across:
+
 - Text messages
 - Background fills
 - Border highlights
@@ -52,6 +60,7 @@ This allows consistent use across:
 ### 1. Base Content Colors
 
 #### Primary Foreground
+
 **Purpose:** Main text, headings, numbers, input text, table content, default icons
 
 ```css
@@ -59,6 +68,7 @@ This allows consistent use across:
 ```
 
 **Usage:**
+
 - Body text
 - Headings (h1-h6)
 - Data in tables
@@ -66,6 +76,7 @@ This allows consistent use across:
 - Primary icons
 
 #### Secondary Content
+
 **Purpose:** Labels, helper text, metadata, subtitles, table column hints, muted icons
 
 ```css
@@ -73,6 +84,7 @@ This allows consistent use across:
 ```
 
 **Usage:**
+
 - Form labels
 - Table column headers
 - Help text
@@ -80,6 +92,7 @@ This allows consistent use across:
 - Captions
 
 #### Tertiary / Disabled Content
+
 **Purpose:** Disabled text, placeholders, inactive icons, non-essential metadata
 
 ```css
@@ -89,6 +102,7 @@ This allows consistent use across:
 ```
 
 **Usage:**
+
 - Disabled form fields
 - Placeholder text
 - Inactive states
@@ -99,6 +113,7 @@ This allows consistent use across:
 ### 2. Surface Colors
 
 #### App Background
+
 **Purpose:** Page background, empty areas, large layouts
 
 ```css
@@ -106,6 +121,7 @@ This allows consistent use across:
 ```
 
 #### Surface / Card
+
 **Purpose:** Cards, tables, panels, drawers, modals
 
 ```css
@@ -113,6 +129,7 @@ This allows consistent use across:
 ```
 
 #### Subtle Surface
+
 **Purpose:** Muted sections, table headers, hover rows, grouped blocks
 
 ```css
@@ -120,6 +137,7 @@ This allows consistent use across:
 ```
 
 **Layering Example:**
+
 ```
 App Background (--surface-app)
   └─ Card (--surface-card)
@@ -131,6 +149,7 @@ App Background (--surface-app)
 ### 3. Border & Separation Colors
 
 #### Default Border
+
 **Purpose:** Table grid lines, card borders, input borders, separators
 
 ```css
@@ -138,6 +157,7 @@ App Background (--surface-app)
 ```
 
 #### Strong Border
+
 **Purpose:** Emphasized dividers, section separators
 
 ```css
@@ -145,6 +165,7 @@ App Background (--surface-app)
 ```
 
 #### Focus & Selection
+
 **Purpose:** Focus rings, selected outlines, drag indicators
 
 ```css
@@ -157,6 +178,7 @@ App Background (--surface-app)
 ### 4. Interactive Colors
 
 #### Primary Action
+
 **Purpose:** Main buttons, primary links, key CTAs, selected tabs
 
 ```css
@@ -169,6 +191,7 @@ App Background (--surface-app)
 **Important:** This is the **action color**, not the brand color. It represents the primary interactive element in the UI.
 
 #### Secondary Action
+
 **Purpose:** Secondary buttons, alternative actions
 
 ```css
@@ -179,6 +202,7 @@ App Background (--surface-app)
 ```
 
 #### Selection / Highlight
+
 **Purpose:** Selected rows, active list items, selected cards, focused navigation items
 
 ```css
@@ -194,6 +218,7 @@ App Background (--surface-app)
 Each intent has 4 variants for maximum flexibility:
 
 #### Success
+
 **Purpose:** Completed, positive, valid, healthy
 
 ```css
@@ -204,12 +229,14 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Use Cases:**
+
 - ✅ Form validation success
 - ✅ Completed tasks
 - ✅ Positive metrics
 - ✅ Health indicators
 
 #### Warning
+
 **Purpose:** Attention required, risk, incomplete, pending issues
 
 ```css
@@ -220,12 +247,14 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Use Cases:**
+
 - ⚠️ Input warnings
 - ⚠️ Pending approvals
 - ⚠️ Risk indicators
 - ⚠️ Incomplete data
 
 #### Error
+
 **Purpose:** Failed, invalid, destructive, blocked
 
 ```css
@@ -236,12 +265,14 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Use Cases:**
+
 - ❌ Form validation errors
 - ❌ Failed operations
 - ❌ Destructive actions
 - ❌ Blocked states
 
 #### Info
+
 **Purpose:** Neutral system message, hint, informational status
 
 ```css
@@ -252,6 +283,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Use Cases:**
+
 - ℹ️ System notifications
 - ℹ️ Help tooltips
 - ℹ️ Informational badges
@@ -270,6 +302,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Do NOT use for:**
+
 - Action buttons (use `--action-primary`)
 - Status indicators (use intent colors)
 - Charts (use `--chart-*`)
@@ -286,6 +319,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 **Separate from intent colors** - these are optimized for:
+
 - Data differentiation
 - Visual harmony
 - Colorblind accessibility
@@ -295,6 +329,7 @@ Each intent has 4 variants for maximum flexibility:
 ## Component-Specific Tokens
 
 ### Tables
+
 ```css
 --table-header-background
 --table-header-foreground
@@ -305,6 +340,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 ### Forms & Inputs
+
 ```css
 --input-background
 --input-border
@@ -317,6 +353,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 ### Buttons
+
 ```css
 --button-primary-background
 --button-primary-foreground
@@ -333,6 +370,7 @@ Each intent has 4 variants for maximum flexibility:
 ```
 
 ### Navigation
+
 ```css
 --nav-background
 --nav-foreground
@@ -404,10 +442,12 @@ Each intent has 4 variants for maximum flexibility:
 ### Selected Table Row
 
 ```tsx
-<tr style={{
-  background: 'var(--selection-background)',
-  color: 'var(--selection-foreground)'
-}}>
+<tr
+  style={{
+    background: 'var(--selection-background)',
+    color: 'var(--selection-foreground)',
+  }}
+>
   <td>Row data</td>
 </tr>
 ```
@@ -428,19 +468,20 @@ When transferring colors from Figma:
 
 ### Example Mapping
 
-| Figma Name | Maps To | Reason |
-|------------|---------|--------|
+| Figma Name                 | Maps To            | Reason               |
+| -------------------------- | ------------------ | -------------------- |
 | "Primary Blue" for buttons | `--action-primary` | It's an action color |
-| "Success Green" | `--intent-success` | Status indicator |
-| "Background Gray" | `--surface-app` | Page background |
-| "Border Light" | `--border-default` | Default separator |
-| "Logo Purple" | `--brand-primary` | Brand identity |
+| "Success Green"            | `--intent-success` | Status indicator     |
+| "Background Gray"          | `--surface-app`    | Page background      |
+| "Border Light"             | `--border-default` | Default separator    |
+| "Logo Purple"              | `--brand-primary`  | Brand identity       |
 
 ---
 
 ## Color Contrast & Accessibility
 
 All foreground/background combinations meet **WCAG AA standards** for contrast:
+
 - Content colors on surfaces: ≥ 4.5:1
 - Interactive elements: ≥ 3:1
 - Intent colors: Tested for readability

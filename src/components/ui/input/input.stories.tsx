@@ -200,8 +200,18 @@ export const AllStates: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
       <Input placeholder="Default state" leftIcon={<User />} />
-      <Input placeholder="Error state" leftIcon={<User />} isError rightIcon={<AlertCircle className="text-destructive" />} />
-      <Input placeholder="Success state" leftIcon={<User />} isSuccess rightIcon={<CheckCircle className="text-green-500" />} />
+      <Input
+        placeholder="Error state"
+        leftIcon={<User />}
+        isError
+        rightIcon={<AlertCircle className="text-destructive" />}
+      />
+      <Input
+        placeholder="Success state"
+        leftIcon={<User />}
+        isSuccess
+        rightIcon={<CheckCircle className="text-green-500" />}
+      />
       <Input placeholder="Disabled state" leftIcon={<User />} disabled />
     </div>
   ),

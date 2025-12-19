@@ -29,7 +29,12 @@ describe('InputPassword', () => {
     });
 
     it('renders custom lock icon', () => {
-      render(<InputPassword placeholder="Password" lockIcon={<span data-testid="custom-lock">🔒</span>} />);
+      render(
+        <InputPassword
+          placeholder="Password"
+          lockIcon={<span data-testid="custom-lock">🔒</span>}
+        />
+      );
       expect(screen.getByTestId('custom-lock')).toBeInTheDocument();
     });
   });
@@ -203,7 +208,9 @@ describe('InputPassword', () => {
     });
 
     it('applies wrapperClassName to container', () => {
-      const { container } = render(<InputPassword wrapperClassName="wrapper-class" placeholder="Password" />);
+      const { container } = render(
+        <InputPassword wrapperClassName="wrapper-class" placeholder="Password" />
+      );
       expect(container.querySelector('.wrapper-class')).toBeInTheDocument();
     });
   });

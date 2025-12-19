@@ -1,6 +1,5 @@
-export { Input, type InputProps } from './input';
-export { InputSearch, type InputSearchProps } from './input-search';
-export { InputPassword, type InputPasswordProps } from './input-password';
+export { Input } from './input';
+export type { InputProps } from './input.types';
 export {
   inputVariants,
   inputWrapperVariants,

@@ -22,7 +22,12 @@ describe('InputSearch', () => {
     });
 
     it('renders custom search icon', () => {
-      render(<InputSearch placeholder="Search" searchIcon={<span data-testid="custom-search">🔍</span>} />);
+      render(
+        <InputSearch
+          placeholder="Search"
+          searchIcon={<span data-testid="custom-search">🔍</span>}
+        />
+      );
       expect(screen.getByTestId('custom-search')).toBeInTheDocument();
     });
   });
@@ -66,7 +71,9 @@ describe('InputSearch', () => {
     it('calls onClear when clear button is clicked', async () => {
       const user = userEvent.setup();
       const handleClear = vi.fn();
-      render(<InputSearch placeholder="Search" value="test" onClear={handleClear} onChange={() => {}} />);
+      render(
+        <InputSearch placeholder="Search" value="test" onClear={handleClear} onChange={() => {}} />
+      );
 
       await user.click(screen.getByRole('button', { name: 'Clear search' }));
 
@@ -87,7 +94,9 @@ describe('InputSearch', () => {
 
     it('renders custom clear icon', async () => {
       const user = userEvent.setup();
-      render(<InputSearch placeholder="Search" clearIcon={<span data-testid="custom-clear">✕</span>} />);
+      render(
+        <InputSearch placeholder="Search" clearIcon={<span data-testid="custom-clear">✕</span>} />
+      );
 
       await user.type(screen.getByRole('searchbox'), 'test');
 
@@ -95,7 +104,14 @@ describe('InputSearch', () => {
     });
 
     it('respects showClearButton prop', () => {
-      render(<InputSearch placeholder="Search" value="test" showClearButton={false} onChange={() => {}} />);
+      render(
+        <InputSearch
+          placeholder="Search"
+          value="test"
+          showClearButton={false}
+          onChange={() => {}}
+        />
+      );
       expect(screen.queryByRole('button', { name: 'Clear search' })).not.toBeInTheDocument();
     });
 
@@ -147,7 +163,9 @@ describe('InputSearch', () => {
 
     it('works with controlled value', async () => {
       const handleChange = vi.fn();
-      const { rerender } = render(<InputSearch placeholder="Search" value="initial" onChange={handleChange} />);
+      const { rerender } = render(
+        <InputSearch placeholder="Search" value="initial" onChange={handleChange} />
+      );
 
       expect(screen.getByRole('searchbox')).toHaveValue('initial');
 
@@ -164,7 +182,9 @@ describe('InputSearch', () => {
     });
 
     it('applies wrapperClassName to container', () => {
-      const { container } = render(<InputSearch wrapperClassName="wrapper-class" placeholder="Search" />);
+      const { container } = render(
+        <InputSearch wrapperClassName="wrapper-class" placeholder="Search" />
+      );
       expect(container.querySelector('.wrapper-class')).toBeInTheDocument();
     });
   });
