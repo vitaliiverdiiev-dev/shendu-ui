@@ -1,9 +1,9 @@
 {
   "name": "@shendu-ui/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "A modern React UI component library built with TailwindCSS v4 and Shadcn patterns",
-  "author": "Your Name <your.email@example.com>",
+  "author": "Vitalii Verdiiev <vvitaliiverdiiev.dev@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
