@@ -1,5 +1,11 @@
 # @shendu-ui/core
 
+## 0.3.2
+
+### Patch Changes
+
+- add Success, Warning, Destructive, Info colors, update storybook
+
 ## 0.3.1
 
 ### Patch Changes

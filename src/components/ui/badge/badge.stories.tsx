@@ -17,7 +17,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'secondary', 'destructive', 'outline'],
+      options: ['default', 'secondary', 'destructive', 'warning', 'success', 'info', 'outline'],
       description: 'The visual style variant of the badge',
       table: {
         defaultValue: { summary: 'default' },
@@ -60,6 +60,27 @@ export const Destructive: Story = {
   },
 };
 
+export const Warning: Story = {
+  args: {
+    variant: 'warning',
+    children: 'Warning',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    variant: 'success',
+    children: 'Success',
+  },
+};
+
+export const Info: Story = {
+  args: {
+    variant: 'info',
+    children: 'Info',
+  },
+};
+
 export const Outline: Story = {
   args: {
     variant: 'outline',
@@ -73,6 +94,9 @@ export const AllVariants: Story = {
       <Badge variant="default">Default</Badge>
       <Badge variant="secondary">Secondary</Badge>
       <Badge variant="destructive">Destructive</Badge>
+      <Badge variant="warning">Warning</Badge>
+      <Badge variant="success">Success</Badge>
+      <Badge variant="info">Info</Badge>
       <Badge variant="outline">Outline</Badge>
     </div>
   ),
@@ -104,9 +128,10 @@ export const WithIcons: Story = {
 export const StatusBadges: Story = {
   render: () => (
     <div className="flex flex-wrap gap-2">
-      <Badge variant="secondary">New</Badge>
+      <Badge variant="info">New</Badge>
       <Badge variant="default">In Progress</Badge>
-      <Badge variant="outline">Pending</Badge>
+      <Badge variant="warning">Pending</Badge>
+      <Badge variant="success">Completed</Badge>
       <Badge variant="destructive">Closed</Badge>
     </div>
   ),
@@ -148,6 +173,48 @@ export const CustomStyling: Story = {
       <Badge className="uppercase">Uppercase</Badge>
       <Badge className="font-bold">Bold</Badge>
       <Badge className="px-4 py-1">Large Padding</Badge>
+    </div>
+  ),
+};
+
+export const StateColors: Story = {
+  render: () => (
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-wrap gap-2">
+        <Badge className="bg-destructive text-destructive-foreground border-destructive">Destructive</Badge>
+        <Badge className="bg-warning text-warning-foreground border-warning">Warning</Badge>
+        <Badge className="bg-success text-success-foreground border-success">Success</Badge>
+        <Badge className="bg-info text-info-foreground border-info">Info</Badge>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        <Badge className="border-destructive text-destructive-foreground bg-transparent">Destructive Outline</Badge>
+        <Badge className="border-warning text-warning-foreground bg-transparent">Warning Outline</Badge>
+        <Badge className="border-success text-success-foreground bg-transparent">Success Outline</Badge>
+        <Badge className="border-info text-info-foreground bg-transparent">Info Outline</Badge>
+      </div>
+    </div>
+  ),
+};
+
+export const StateColorsWithIcons: Story = {
+  render: () => (
+    <div className="flex flex-wrap gap-2">
+      <Badge className="bg-destructive text-destructive-foreground border-destructive">
+        <span>✕</span>
+        Error
+      </Badge>
+      <Badge className="bg-warning text-warning-foreground border-warning">
+        <span>⚠</span>
+        Warning
+      </Badge>
+      <Badge className="bg-success text-success-foreground border-success">
+        <span>✓</span>
+        Success
+      </Badge>
+      <Badge className="bg-info text-info-foreground border-info">
+        <span>ℹ</span>
+        Info
+      </Badge>
     </div>
   ),
 };

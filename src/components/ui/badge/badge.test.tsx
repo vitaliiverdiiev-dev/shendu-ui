@@ -32,7 +32,25 @@ describe('Badge', () => {
     it('applies destructive variant classes', () => {
       render(<Badge variant="destructive">Destructive</Badge>);
       const badge = screen.getByText('Destructive');
-      expect(badge).toHaveClass('bg-destructive', 'text-white');
+      expect(badge).toHaveClass('bg-destructive', 'text-destructive-foreground');
+    });
+
+    it('applies warning variant classes', () => {
+      render(<Badge variant="warning">Warning</Badge>);
+      const badge = screen.getByText('Warning');
+      expect(badge).toHaveClass('bg-warning', 'text-warning-foreground');
+    });
+
+    it('applies success variant classes', () => {
+      render(<Badge variant="success">Success</Badge>);
+      const badge = screen.getByText('Success');
+      expect(badge).toHaveClass('bg-success', 'text-success-foreground');
+    });
+
+    it('applies info variant classes', () => {
+      render(<Badge variant="info">Info</Badge>);
+      const badge = screen.getByText('Info');
+      expect(badge).toHaveClass('bg-info', 'text-info-foreground');
     });
 
     it('applies outline variant classes', () => {
