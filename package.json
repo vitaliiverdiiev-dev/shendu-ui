@@ -74,6 +74,7 @@
     "test:e2e:update": "playwright test --update-snapshots",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "deploy-storybook": "npm run build-storybook && npx http-server storybook-static",
     "quality": "npm run lint && npm run format:check",
     "quality:fix": "npm run lint:fix && npm run format",
     "validate": "npm run type-check && npm run lint && npm run test:run",
