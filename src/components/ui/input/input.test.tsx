@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from 'vitest';
+import { createRef } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createRef } from 'react';
+import { describe, it, expect, vi } from 'vitest';
 import { Input } from './input';
 
 describe('Input', () => {
@@ -56,10 +56,7 @@ describe('Input', () => {
 
     it('renders both icons', () => {
       render(
-        <Input
-          leftIcon={<span data-testid="left-icon">🔍</span>}
-          rightIcon={<span data-testid="right-icon">✓</span>}
-        />
+        <Input leftIcon={<span data-testid="left-icon">🔍</span>} rightIcon={<span data-testid="right-icon">✓</span>} />
       );
       expect(screen.getByTestId('left-icon')).toBeInTheDocument();
       expect(screen.getByTestId('right-icon')).toBeInTheDocument();
@@ -189,11 +186,7 @@ describe('Input', () => {
 
     it('applies wrapperClassName when icons present', () => {
       const { container } = render(
-        <Input
-          wrapperClassName="wrapper-class"
-          leftIcon={<span>🔍</span>}
-          placeholder="With wrapper"
-        />
+        <Input wrapperClassName="wrapper-class" leftIcon={<span>🔍</span>} placeholder="With wrapper" />
       );
       expect(container.querySelector('.wrapper-class')).toBeInTheDocument();
     });

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { UserInfo } from './user-info';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Components/UserInfo',
@@ -39,8 +39,7 @@ const meta = {
     },
     asButton: {
       control: 'boolean',
-      description:
-        'Render as interactive button instead of static div. Only when true, onClick can be used.',
+      description: 'Render as interactive button instead of static div. Only when true, onClick can be used.',
       table: {
         defaultValue: { summary: 'false' },
       },
@@ -111,9 +110,7 @@ export const Interactive: Story = {
     showChevron: true,
     asButton: true,
   },
-  render: () => (
-    <UserInfo user={defaultUser} showChevron asButton onClick={() => alert('Clicked!')} />
-  ),
+  render: () => <UserInfo user={defaultUser} showChevron asButton onClick={() => alert('Clicked!')} />,
 };
 
 export const AsButton: Story = {

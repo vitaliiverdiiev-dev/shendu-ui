@@ -9,7 +9,6 @@ build
 coverage
 storybook-static
 playwright-report
-test-results
 
 # Misc
 .DS_Store
@@ -18,15 +17,3 @@ test-results
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
-
-# IDE
-.vscode
-.idea
-
-# Environment
-.env
-.env.*
-
-# Generated files
-*.min.js
-*.min.css

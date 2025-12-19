@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Search, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import type { InputSearchProps } from './input-search.types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -8,7 +8,7 @@ import {
   ICON_CONTAINER_INTERACTIVE,
   type InputSize,
 } from '@/components/ui/input/input.variants';
-import type { InputSearchProps } from './input-search.types';
+import { cn } from '@/lib/utils';
 
 const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
   (
@@ -46,14 +46,9 @@ const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
         setInternalValue('');
       }
       onClear?.();
-      const input = document.querySelector(
-        `[data-input-search-id="${props.id || 'default'}"]`
-      ) as HTMLInputElement;
+      const input = document.querySelector(`[data-input-search-id="${props.id || 'default'}"]`) as HTMLInputElement;
       if (input && onChange) {
-        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-          window.HTMLInputElement.prototype,
-          'value'
-        )?.set;
+        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
         nativeInputValueSetter?.call(input, '');
         const event = new Event('input', { bubbles: true });
         input.dispatchEvent(event);
@@ -85,10 +80,7 @@ const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
         ref={ref}
         type="search"
         data-input-search-id={props.id || 'default'}
-        className={cn(
-          '[&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden',
-          className
-        )}
+        className={cn('[&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden', className)}
         size={size}
         leftIcon={searchIcon || <Search />}
         rightElement={clearButton}

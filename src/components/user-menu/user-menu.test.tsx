@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { UserMenu } from './user-menu';
 import type { UserData, UserMenuItem } from '@/components/user-info';
 
@@ -97,9 +97,7 @@ describe('UserMenu', () => {
     it('calls onClick handler when menu item is clicked', async () => {
       const user = userEvent.setup();
       const onProfileClick = vi.fn();
-      const menuItems: UserMenuItem[] = [
-        { id: 'profile', label: 'Profile', onClick: onProfileClick },
-      ];
+      const menuItems: UserMenuItem[] = [{ id: 'profile', label: 'Profile', onClick: onProfileClick }];
 
       render(<UserMenu user={mockUser} menuItems={menuItems} />);
 
@@ -116,17 +114,13 @@ describe('UserMenu', () => {
 
   describe('Sizes', () => {
     it('passes size prop to UserInfo trigger', () => {
-      const { container } = render(
-        <UserMenu user={mockUser} menuItems={mockMenuItems} size="sm" />
-      );
+      const { container } = render(<UserMenu user={mockUser} menuItems={mockMenuItems} size="sm" />);
       const userInfo = container.querySelector('.gap-1\\.5');
       expect(userInfo).toBeInTheDocument();
     });
 
     it('applies large size to trigger', () => {
-      const { container } = render(
-        <UserMenu user={mockUser} menuItems={mockMenuItems} size="lg" />
-      );
+      const { container } = render(<UserMenu user={mockUser} menuItems={mockMenuItems} size="lg" />);
       const userInfo = container.querySelector('.gap-3');
       expect(userInfo).toBeInTheDocument();
     });

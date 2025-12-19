@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { fn } from 'storybook/test';
 import { Search, Mail, EyeOff, User, Lock, AlertCircle, CheckCircle } from 'lucide-react';
+import { fn } from 'storybook/test';
 import { Input } from './input';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Components/Input',

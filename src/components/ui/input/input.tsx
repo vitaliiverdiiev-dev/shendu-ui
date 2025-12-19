@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { cn } from '@/lib/utils';
 import {
   inputVariants,
   inputWrapperVariants,
@@ -10,6 +9,7 @@ import {
   type InputSize,
 } from './input.variants';
 import type { InputProps } from './input.types';
+import { cn } from '@/lib/utils';
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
@@ -61,10 +61,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={cn(inputWrapperVariants({ size }), wrapperClassName)}>
         {leftIcon && (
-          <span
-            className={cn(ICON_CONTAINER_STATIC, 'left-0', iconWidth, disabled && 'opacity-50')}
-            aria-hidden="true"
-          >
+          <span className={cn(ICON_CONTAINER_STATIC, 'left-0', iconWidth, disabled && 'opacity-50')} aria-hidden="true">
             {leftIcon}
           </span>
         )}
@@ -73,12 +70,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ? rightElement
           : rightIcon && (
               <span
-                className={cn(
-                  ICON_CONTAINER_STATIC,
-                  'right-0',
-                  iconWidth,
-                  disabled && 'opacity-50'
-                )}
+                className={cn(ICON_CONTAINER_STATIC, 'right-0', iconWidth, disabled && 'opacity-50')}
                 aria-hidden="true"
               >
                 {rightIcon}

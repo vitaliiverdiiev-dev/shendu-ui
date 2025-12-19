@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from 'vitest';
+import { createRef } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { createRef } from 'react';
+import { describe, it, expect, vi } from 'vitest';
 import { InputPassword } from './input-password';
 
 describe('InputPassword', () => {
@@ -18,23 +18,16 @@ describe('InputPassword', () => {
 
     it('renders lock icon by default', () => {
       const { container } = render(<InputPassword placeholder="Password" />);
-      // Lock icon + eye icon = 2 SVGs
       expect(container.querySelectorAll('svg').length).toBeGreaterThanOrEqual(2);
     });
 
     it('hides lock icon when showLockIcon is false', () => {
       const { container } = render(<InputPassword placeholder="Password" showLockIcon={false} />);
-      // Only eye icon
       expect(container.querySelectorAll('svg').length).toBe(1);
     });
 
     it('renders custom lock icon', () => {
-      render(
-        <InputPassword
-          placeholder="Password"
-          lockIcon={<span data-testid="custom-lock">🔒</span>}
-        />
-      );
+      render(<InputPassword placeholder="Password" lockIcon={<span data-testid="custom-lock">🔒</span>} />);
       expect(screen.getByTestId('custom-lock')).toBeInTheDocument();
     });
   });
@@ -88,22 +81,12 @@ describe('InputPassword', () => {
     it('works with controlled visibility', async () => {
       const handleVisibilityChange = vi.fn();
       const { rerender } = render(
-        <InputPassword
-          placeholder="Password"
-          visible={false}
-          onVisibilityChange={handleVisibilityChange}
-        />
+        <InputPassword placeholder="Password" visible={false} onVisibilityChange={handleVisibilityChange} />
       );
 
       expect(screen.getByPlaceholderText('Password')).toHaveAttribute('type', 'password');
 
-      rerender(
-        <InputPassword
-          placeholder="Password"
-          visible={true}
-          onVisibilityChange={handleVisibilityChange}
-        />
-      );
+      rerender(<InputPassword placeholder="Password" visible={true} onVisibilityChange={handleVisibilityChange} />);
 
       expect(screen.getByPlaceholderText('Password')).toHaveAttribute('type', 'text');
     });
@@ -208,9 +191,7 @@ describe('InputPassword', () => {
     });
 
     it('applies wrapperClassName to container', () => {
-      const { container } = render(
-        <InputPassword wrapperClassName="wrapper-class" placeholder="Password" />
-      );
+      const { container } = render(<InputPassword wrapperClassName="wrapper-class" placeholder="Password" />);
       expect(container.querySelector('.wrapper-class')).toBeInTheDocument();
     });
   });

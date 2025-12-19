@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { fn } from 'storybook/test';
 import { useState } from 'react';
+import { fn } from 'storybook/test';
 import { InputPassword } from './input-password';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Components/InputPassword',
@@ -124,14 +124,8 @@ export const Controlled: Story = {
 
     return (
       <div className="flex flex-col gap-2">
-        <InputPassword
-          placeholder="Enter password"
-          visible={visible}
-          onVisibilityChange={setVisible}
-        />
-        <p className="text-muted-foreground text-sm">
-          Password is {visible ? 'visible' : 'hidden'}
-        </p>
+        <InputPassword placeholder="Enter password" visible={visible} onVisibilityChange={setVisible} />
+        <p className="text-muted-foreground text-sm">Password is {visible ? 'visible' : 'hidden'}</p>
       </div>
     );
   },

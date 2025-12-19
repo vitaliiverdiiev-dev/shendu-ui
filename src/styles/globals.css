@@ -1,9 +1,9 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
-@import './root.css';
-@import './theme-light.css';
-@import './theme-dark.css';
-@import './theme-inline.css';
+@import "./root.css";
+@import "./theme-light.css";
+@import "./theme-dark.css";
+@import "./theme-inline.css";
 
 @custom-variant dark (&:is(.dark *));

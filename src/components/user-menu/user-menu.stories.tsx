@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { LogOut, Settings, User, HelpCircle } from 'lucide-react';
 import { UserMenu } from './user-menu';
 import type { UserMenuItem } from '@/components/user-info';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Components/UserMenu',

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Eye, EyeOff, Lock } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useToggle } from '@/hooks/use-toggle';
+import type { InputPasswordProps } from './input-password.types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -9,7 +8,8 @@ import {
   ICON_CONTAINER_INTERACTIVE,
   type InputSize,
 } from '@/components/ui/input/input.variants';
-import type { InputPasswordProps } from './input-password.types';
+import { useToggle } from '@/hooks/use-toggle';
+import { cn } from '@/lib/utils';
 
 const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordProps>(
   (

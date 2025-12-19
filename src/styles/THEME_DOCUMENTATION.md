@@ -2,7 +2,9 @@
 
 ## Overview
 
-This theming system is designed specifically for **data-intensive applications** like CRM systems and dashboards. It provides a comprehensive set of semantic color tokens that prioritize clarity, usability, and consistency across complex UI patterns.
+This theming system is designed specifically for **data-intensive applications** like CRM systems and dashboards. It
+provides a comprehensive set of semantic color tokens that prioritize clarity, usability, and consistency across complex
+UI patterns.
 
 ## Files
 
@@ -188,7 +190,8 @@ App Background (--surface-app)
 --action-primary-active
 ```
 
-**Important:** This is the **action color**, not the brand color. It represents the primary interactive element in the UI.
+**Important:** This is the **action color**, not the brand color. It represents the primary interactive element in the
+UI.
 
 #### Secondary Action
 

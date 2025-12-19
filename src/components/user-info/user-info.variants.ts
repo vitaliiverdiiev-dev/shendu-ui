@@ -8,7 +8,7 @@ export const userInfoVariants = cva('flex items-center', {
       lg: 'gap-3',
     },
     interactive: {
-      true: 'cursor-pointer hover:[&_*]:text-black [&_*]:transition-colors',
+      true: 'cursor-pointer [&_*]:transition-colors hover:[&_*]:text-black',
       false: '',
     },
   },
@@ -31,7 +31,7 @@ export const avatarSizeVariants = cva('', {
   },
 });
 
-export const avatarFallbackVariants = cva('bg-blue-100 text-blue-600 font-medium', {
+export const avatarFallbackVariants = cva('bg-blue-100 font-medium text-blue-600', {
   variants: {
     size: {
       sm: 'text-xs',
@@ -44,7 +44,7 @@ export const avatarFallbackVariants = cva('bg-blue-100 text-blue-600 font-medium
   },
 });
 
-export const nameVariants = cva('font-medium text-foreground', {
+export const nameVariants = cva('text-foreground font-medium', {
   variants: {
     size: {
       sm: 'text-xs',
@@ -71,13 +71,13 @@ export const emailVariants = cva('text-muted-foreground', {
 });
 
 export const roleBadgeVariants = cva(
-  'inline-flex items-center rounded-xl font-medium uppercase bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-500',
+  'inline-flex items-center rounded-xl bg-amber-100 font-medium text-amber-800 uppercase dark:bg-amber-900/30 dark:text-amber-500',
   {
     variants: {
       size: {
-        sm: 'text-[9px] px-1.5 py-0',
-        default: 'text-[10px] px-2 py-0.5',
-        lg: 'text-xs px-2.5 py-0.5',
+        sm: 'px-1.5 py-0 text-[9px]',
+        default: 'px-2 py-0.5 text-[10px]',
+        lg: 'px-2.5 py-0.5 text-xs',
       },
     },
     defaultVariants: {
