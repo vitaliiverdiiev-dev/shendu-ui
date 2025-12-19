@@ -1,6 +1,6 @@
 {
   "name": "@shendu-ui/core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "A modern React UI component library built with TailwindCSS v4 and Shadcn patterns",
   "author": "Vitalii Verdiiev <vvitaliiverdiiev.dev@gmail.com>",
@@ -79,7 +79,7 @@
     "quality:fix": "npm run lint:fix && npm run format",
     "validate": "npm run type-check && npm run lint && npm run test:run",
     "prepublishOnly": "npm run validate && npm run build:lib",
-    "release": "changeset publish",
+    "release": "dotenv -e .env -- changeset publish",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },
@@ -123,6 +123,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "@vitest/browser-playwright": "^4.0.15",
     "@vitest/coverage-v8": "^4.0.15",
+    "dotenv-cli": "11.0.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
