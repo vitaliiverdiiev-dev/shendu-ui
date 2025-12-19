@@ -58,7 +58,7 @@ type Story = StoryObj<typeof meta>;
 
 const defaultUser = {
   name: 'Vitalii Verdiiev',
-  email: 'vitaliytech@godsofmarketing.network',
+  email: 'vivitaliiverdiiev.dev@gmail.com',
   role: 'QA',
   avatarUrl: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Vitalii',
 };
@@ -208,8 +208,8 @@ export const WithDisabledItem: Story = {
 export const WithoutAvatar: Story = {
   args: {
     user: {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
+      name: 'Vitalii Verdiiev',
+      email: 'vitaliiverdiiev.dev@gmail.com',
       role: 'Developer',
     },
     menuItems: defaultMenuItems,

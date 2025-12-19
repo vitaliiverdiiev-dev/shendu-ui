@@ -1,6 +1,6 @@
 {
   "name": "@shendu-ui/core",
-  "version": "0.1.2",
+  "version": "0.3.0",
   "type": "module",
   "description": "A modern React UI component library built with TailwindCSS v4 and Shadcn patterns",
   "author": "Vitalii Verdiiev <vvitaliiverdiiev.dev@gmail.com>",
