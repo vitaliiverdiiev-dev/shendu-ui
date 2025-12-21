@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
-// Plugin to build the theme-only CSS file with all imports inlined
+// Plugin to build the theme-only CSS file with pure CSS variables (no Tailwind directives)
 const buildThemeOnlyPlugin = () => ({
   name: 'build-theme-only',
   closeBundle() {
@@ -17,27 +17,29 @@ const buildThemeOnlyPlugin = () => ({
       mkdirSync(destDir, { recursive: true });
     }
 
-    // Read all theme CSS files and concatenate them
-    const files = ['root.css', 'theme-light.css', 'theme-dark.css', 'theme-inline.css'];
-    let themeContent = `/*
- * Shendu UI Theme Variables
+    // Read CSS files that contain pure CSS (no @theme directives)
+    // root.css has :root variables, theme-dark.css has .dark variables
+    const rootCss = readFileSync(path.resolve(stylesDir, 'root.css'), 'utf-8');
+    const darkCss = readFileSync(path.resolve(stylesDir, 'theme-dark.css'), 'utf-8');
+
+    const themeContent = `/*
+ * Shendu UI Theme Variables (Isolated)
  * These CSS variables use -ui suffix to prevent conflicts with other UI libraries.
- * Use this file when importing shendu-ui into a project that already has Tailwind configured.
+ * Import this file to use shendu-ui components without affecting your app's styles.
+ *
+ * Usage: import '@shendu-ui/core/theme.css';
  */
 
-`;
+/* ===== Light Theme Variables ===== */
+${rootCss}
 
-    for (const file of files) {
-      const filePath = path.resolve(stylesDir, file);
-      if (existsSync(filePath)) {
-        const content = readFileSync(filePath, 'utf-8');
-        themeContent += `/* ${file} */\n${content}\n\n`;
-      }
-    }
+/* ===== Dark Theme Variables ===== */
+${darkCss}
+`;
 
     writeFileSync(destPath, themeContent);
     // eslint-disable-next-line no-console
-    console.info('✓ Built theme.css with all CSS variables');
+    console.info('✓ Built theme.css from CSS source files');
   },
 });
 
