@@ -1,5 +1,11 @@
 # @shendu-ui/core
 
+## 0.4.1
+
+### Patch Changes
+
+- vite config fix
+
 ## 0.3.6
 
 ### Patch Changes
