@@ -1,5 +1,11 @@
 # @shendu-ui/core
 
+## 0.3.5
+
+### Patch Changes
+
+- css variables only
+
 ## 0.3.4
 
 ### Patch Changes
