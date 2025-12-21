@@ -152,7 +152,7 @@ describe('InputPassword', () => {
     it('applies error state classes', () => {
       render(<InputPassword isError placeholder="Password" />);
       const input = screen.getByPlaceholderText('Password');
-      expect(input).toHaveClass('border-destructive');
+      expect(input).toHaveClass('border-destructive-ui');
       expect(input).toHaveAttribute('aria-invalid', 'true');
     });
 

@@ -42,7 +42,7 @@ const UserMenu = React.forwardRef<HTMLDivElement, UserMenuProps>(
               <>
                 <DropdownMenuSeparator />
                 <DropdownMenuLabel className="px-3 py-2 font-normal">
-                  <p className="text-muted-foreground text-xs">Version {version}</p>
+                  <p className="text-muted-foreground-ui text-xs">Version {version}</p>
                 </DropdownMenuLabel>
               </>
             )}

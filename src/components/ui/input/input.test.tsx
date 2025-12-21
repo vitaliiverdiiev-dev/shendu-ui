@@ -102,7 +102,7 @@ describe('Input', () => {
     it('applies error state classes', () => {
       render(<Input isError placeholder="Error" />);
       const input = screen.getByRole('textbox');
-      expect(input).toHaveClass('border-destructive');
+      expect(input).toHaveClass('border-destructive-ui');
       expect(input).toHaveAttribute('aria-invalid', 'true');
     });
 

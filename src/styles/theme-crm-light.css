@@ -16,79 +16,79 @@
      ======================================== */
 
   /* Foreground (Primary Content) - main text, headings, numbers, input text, table content, default icons */
-  --content-foreground: oklch(0.15 0 0);
-  --content-foreground-rgb: 33 33 33;
+  --content-foreground-ui: oklch(0.15 0 0);
+  --content-foreground-rgb-ui: 33 33 33;
 
   /* Secondary Content - labels, helper text, metadata, subtitles, table column hints, muted icons */
-  --content-secondary: oklch(0.45 0 0);
-  --content-secondary-rgb: 102 102 102;
+  --content-secondary-ui: oklch(0.45 0 0);
+  --content-secondary-rgb-ui: 102 102 102;
 
   /* Tertiary / Disabled Content - disabled text, placeholders, inactive icons, non-essential metadata */
-  --content-tertiary: oklch(0.65 0 0);
-  --content-disabled: oklch(0.7 0 0);
-  --content-placeholder: oklch(0.68 0 0);
+  --content-tertiary-ui: oklch(0.65 0 0);
+  --content-disabled-ui: oklch(0.7 0 0);
+  --content-placeholder-ui: oklch(0.68 0 0);
 
   /* ========================================
      SURFACE COLORS
      ======================================== */
 
   /* App Background - page background, empty areas, large layouts */
-  --surface-app: oklch(0.98 0 0);
-  --surface-app-rgb: 248 248 248;
+  --surface-app-ui: oklch(0.98 0 0);
+  --surface-app-rgb-ui: 248 248 248;
 
   /* Surface / Card - cards, tables, panels, drawers, modals */
-  --surface-card: oklch(1 0 0);
-  --surface-card-rgb: 255 255 255;
+  --surface-card-ui: oklch(1 0 0);
+  --surface-card-rgb-ui: 255 255 255;
 
   /* Subtle Surface - muted sections, table headers, hover rows, grouped blocks */
-  --surface-subtle: oklch(0.96 0 0);
-  --surface-subtle-rgb: 242 242 242;
+  --surface-subtle-ui: oklch(0.96 0 0);
+  --surface-subtle-rgb-ui: 242 242 242;
 
   /* Elevated surfaces (for layering) */
-  --surface-elevated: oklch(1 0 0);
-  --surface-overlay: oklch(1 0 0);
+  --surface-elevated-ui: oklch(1 0 0);
+  --surface-overlay-ui: oklch(1 0 0);
 
   /* ========================================
      BORDER & SEPARATION COLORS
      ======================================== */
 
   /* Border / Divider - table grid lines, card borders, input borders, separators */
-  --border-default: oklch(0.88 0 0);
-  --border-default-rgb: 217 217 217;
+  --border-default-ui: oklch(0.88 0 0);
+  --border-default-rgb-ui: 217 217 217;
 
   /* Strong Divider / Focus Outline - focus rings, selected outlines, drag indicators */
-  --border-strong: oklch(0.75 0 0);
-  --border-focus: oklch(0.55 0.15 264);
-  --border-selected: oklch(0.5 0.15 264);
+  --border-strong-ui: oklch(0.75 0 0);
+  --border-focus-ui: oklch(0.55 0.15 264);
+  --border-selected-ui: oklch(0.5 0.15 264);
 
   /* ========================================
      INTERACTIVE COLORS
      ======================================== */
 
   /* Primary Action (action, not brand) - main buttons, primary links, key CTAs, selected tabs */
-  --action-primary: oklch(0.5 0.15 264);
-  --action-primary-rgb: 88 86 214;
-  --action-primary-foreground: oklch(0.99 0 0);
+  --action-primary-ui: oklch(0.5 0.15 264);
+  --action-primary-rgb-ui: 88 86 214;
+  --action-primary-foreground-ui: oklch(0.99 0 0);
 
   /* Primary Action - Hover / Active */
-  --action-primary-hover: oklch(0.45 0.17 264);
-  --action-primary-active: oklch(0.4 0.18 264);
+  --action-primary-hover-ui: oklch(0.45 0.17 264);
+  --action-primary-active-ui: oklch(0.4 0.18 264);
 
   /* Secondary action states */
-  --action-secondary: oklch(0.94 0 0);
-  --action-secondary-hover: oklch(0.9 0 0);
-  --action-secondary-active: oklch(0.86 0 0);
-  --action-secondary-foreground: oklch(0.2 0 0);
+  --action-secondary-ui: oklch(0.94 0 0);
+  --action-secondary-hover-ui: oklch(0.9 0 0);
+  --action-secondary-active-ui: oklch(0.86 0 0);
+  --action-secondary-foreground-ui: oklch(0.2 0 0);
 
   /* Selection / Highlight - selected rows, active list items, selected cards, focused navigation items */
-  --selection-background: oklch(0.92 0.05 264);
-  --selection-background-rgb: 224 224 255;
-  --selection-foreground: oklch(0.3 0.12 264);
-  --selection-border: oklch(0.7 0.12 264);
+  --selection-background-ui: oklch(0.92 0.05 264);
+  --selection-background-rgb-ui: 224 224 255;
+  --selection-foreground-ui: oklch(0.3 0.12 264);
+  --selection-border-ui: oklch(0.7 0.12 264);
 
   /* Hover states for interactive elements */
-  --interactive-hover: oklch(0.95 0 0);
-  --interactive-active: oklch(0.9 0 0);
+  --interactive-hover-ui: oklch(0.95 0 0);
+  --interactive-active-ui: oklch(0.9 0 0);
 
   /* ========================================
      INTENT COLORS
@@ -96,32 +96,32 @@
      ======================================== */
 
   /* Success - completed, positive, valid, healthy */
-  --intent-success: oklch(0.55 0.15 145);
-  --intent-success-rgb: 34 197 94;
-  --intent-success-background: oklch(0.95 0.05 145);
-  --intent-success-border: oklch(0.75 0.1 145);
-  --intent-success-foreground: oklch(0.35 0.12 145);
+  --intent-success-ui: oklch(0.55 0.15 145);
+  --intent-success-rgb-ui: 34 197 94;
+  --intent-success-background-ui: oklch(0.95 0.05 145);
+  --intent-success-border-ui: oklch(0.75 0.1 145);
+  --intent-success-foreground-ui: oklch(0.35 0.12 145);
 
   /* Warning - attention required, risk, incomplete, pending issues */
-  --intent-warning: oklch(0.7 0.15 85);
-  --intent-warning-rgb: 245 158 11;
-  --intent-warning-background: oklch(0.96 0.05 85);
-  --intent-warning-border: oklch(0.8 0.12 85);
-  --intent-warning-foreground: oklch(0.45 0.12 85);
+  --intent-warning-ui: oklch(0.7 0.15 85);
+  --intent-warning-rgb-ui: 245 158 11;
+  --intent-warning-background-ui: oklch(0.96 0.05 85);
+  --intent-warning-border-ui: oklch(0.8 0.12 85);
+  --intent-warning-foreground-ui: oklch(0.45 0.12 85);
 
   /* Error - failed, invalid, destructive, blocked */
-  --intent-error: oklch(0.6 0.2 27);
-  --intent-error-rgb: 239 68 68;
-  --intent-error-background: oklch(0.96 0.05 27);
-  --intent-error-border: oklch(0.78 0.15 27);
-  --intent-error-foreground: oklch(0.45 0.18 27);
+  --intent-error-ui: oklch(0.6 0.2 27);
+  --intent-error-rgb-ui: 239 68 68;
+  --intent-error-background-ui: oklch(0.96 0.05 27);
+  --intent-error-border-ui: oklch(0.78 0.15 27);
+  --intent-error-foreground-ui: oklch(0.45 0.18 27);
 
   /* Info - neutral system message, hint, informational status */
-  --intent-info: oklch(0.58 0.15 240);
-  --intent-info-rgb: 59 130 246;
-  --intent-info-background: oklch(0.95 0.04 240);
-  --intent-info-border: oklch(0.75 0.12 240);
-  --intent-info-foreground: oklch(0.4 0.14 240);
+  --intent-info-ui: oklch(0.58 0.15 240);
+  --intent-info-rgb-ui: 59 130 246;
+  --intent-info-background-ui: oklch(0.95 0.04 240);
+  --intent-info-border-ui: oklch(0.75 0.12 240);
+  --intent-info-foreground-ui: oklch(0.4 0.14 240);
 
   /* ========================================
      BRAND COLOR
@@ -129,113 +129,113 @@
      NOT for: tables, forms, statuses, charts
      ======================================== */
 
-  --brand-primary: oklch(0.48 0.18 280);
-  --brand-primary-rgb: 109 40 217;
-  --brand-secondary: oklch(0.65 0.2 320);
-  --brand-accent: oklch(0.75 0.15 200);
+  --brand-primary-ui: oklch(0.48 0.18 280);
+  --brand-primary-rgb-ui: 109 40 217;
+  --brand-secondary-ui: oklch(0.65 0.2 320);
+  --brand-accent-ui: oklch(0.75 0.15 200);
 
   /* ========================================
      CHART COLORS
      Data visualization palette (separate from intent colors)
      ======================================== */
 
-  --chart-1: oklch(0.55 0.18 264);
-  --chart-2: oklch(0.6 0.15 180);
-  --chart-3: oklch(0.65 0.16 320);
-  --chart-4: oklch(0.7 0.14 85);
-  --chart-5: oklch(0.58 0.15 30);
-  --chart-6: oklch(0.62 0.13 145);
-  --chart-7: oklch(0.68 0.12 200);
-  --chart-8: oklch(0.56 0.14 350);
+  --chart-1-ui: oklch(0.55 0.18 264);
+  --chart-2-ui: oklch(0.6 0.15 180);
+  --chart-3-ui: oklch(0.65 0.16 320);
+  --chart-4-ui: oklch(0.7 0.14 85);
+  --chart-5-ui: oklch(0.58 0.15 30);
+  --chart-6-ui: oklch(0.62 0.13 145);
+  --chart-7-ui: oklch(0.68 0.12 200);
+  --chart-8-ui: oklch(0.56 0.14 350);
 
   /* ========================================
      COMPONENT-SPECIFIC TOKENS
      ======================================== */
 
   /* Tables */
-  --table-header-background: var(--surface-subtle);
-  --table-header-foreground: var(--content-secondary);
-  --table-row-hover: oklch(0.97 0 0);
-  --table-row-selected: var(--selection-background);
-  --table-border: var(--border-default);
-  --table-grid: oklch(0.92 0 0);
+  --table-header-background-ui: var(--surface-subtle-ui);
+  --table-header-foreground-ui: var(--content-secondary-ui);
+  --table-row-hover-ui: oklch(0.97 0 0);
+  --table-row-selected-ui: var(--selection-background-ui);
+  --table-border-ui: var(--border-default-ui);
+  --table-grid-ui: oklch(0.92 0 0);
 
   /* Forms & Inputs */
-  --input-background: var(--surface-card);
-  --input-border: var(--border-default);
-  --input-border-hover: var(--border-strong);
-  --input-border-focus: var(--border-focus);
-  --input-foreground: var(--content-foreground);
-  --input-placeholder: var(--content-placeholder);
-  --input-disabled-background: oklch(0.95 0 0);
-  --input-disabled-foreground: var(--content-disabled);
+  --input-background-ui: var(--surface-card-ui);
+  --input-border-ui: var(--border-default-ui);
+  --input-border-hover-ui: var(--border-strong-ui);
+  --input-border-focus-ui: var(--border-focus-ui);
+  --input-foreground-ui: var(--content-foreground-ui);
+  --input-placeholder-ui: var(--content-placeholder-ui);
+  --input-disabled-background-ui: oklch(0.95 0 0);
+  --input-disabled-foreground-ui: var(--content-disabled-ui);
 
   /* Buttons */
-  --button-primary-background: var(--action-primary);
-  --button-primary-foreground: var(--action-primary-foreground);
-  --button-primary-hover: var(--action-primary-hover);
-  --button-primary-active: var(--action-primary-active);
+  --button-primary-background-ui: var(--action-primary-ui);
+  --button-primary-foreground-ui: var(--action-primary-foreground-ui);
+  --button-primary-hover-ui: var(--action-primary-hover-ui);
+  --button-primary-active-ui: var(--action-primary-active-ui);
 
-  --button-secondary-background: var(--action-secondary);
-  --button-secondary-foreground: var(--action-secondary-foreground);
-  --button-secondary-hover: var(--action-secondary-hover);
-  --button-secondary-active: var(--action-secondary-active);
+  --button-secondary-background-ui: var(--action-secondary-ui);
+  --button-secondary-foreground-ui: var(--action-secondary-foreground-ui);
+  --button-secondary-hover-ui: var(--action-secondary-hover-ui);
+  --button-secondary-active-ui: var(--action-secondary-active-ui);
 
-  --button-ghost-hover: var(--interactive-hover);
-  --button-ghost-active: var(--interactive-active);
+  --button-ghost-hover-ui: var(--interactive-hover-ui);
+  --button-ghost-active-ui: var(--interactive-active-ui);
 
   /* Navigation */
-  --nav-background: var(--surface-card);
-  --nav-foreground: var(--content-foreground);
-  --nav-item-hover: var(--interactive-hover);
-  --nav-item-active: var(--selection-background);
-  --nav-item-active-foreground: var(--selection-foreground);
-  --nav-border: var(--border-default);
+  --nav-background-ui: var(--surface-card-ui);
+  --nav-foreground-ui: var(--content-foreground-ui);
+  --nav-item-hover-ui: var(--interactive-hover-ui);
+  --nav-item-active-ui: var(--selection-background-ui);
+  --nav-item-active-foreground-ui: var(--selection-foreground-ui);
+  --nav-border-ui: var(--border-default-ui);
 
   /* Modals & Overlays */
-  --modal-background: var(--surface-card);
-  --modal-overlay: oklch(0 0 0 / 0.4);
-  --modal-border: var(--border-default);
+  --modal-background-ui: var(--surface-card-ui);
+  --modal-overlay-ui: oklch(0 0 0 / 0.4);
+  --modal-border-ui: var(--border-default-ui);
 
   /* Tooltips */
-  --tooltip-background: oklch(0.25 0 0);
-  --tooltip-foreground: oklch(0.98 0 0);
+  --tooltip-background-ui: oklch(0.25 0 0);
+  --tooltip-foreground-ui: oklch(0.98 0 0);
 
   /* Badges & Tags */
-  --badge-neutral-background: oklch(0.92 0 0);
-  --badge-neutral-foreground: oklch(0.35 0 0);
-  --badge-neutral-border: oklch(0.82 0 0);
+  --badge-neutral-background-ui: oklch(0.92 0 0);
+  --badge-neutral-foreground-ui: oklch(0.35 0 0);
+  --badge-neutral-border-ui: oklch(0.82 0 0);
 
   /* Scrollbars */
-  --scrollbar-track: oklch(0.94 0 0);
-  --scrollbar-thumb: oklch(0.75 0 0);
-  --scrollbar-thumb-hover: oklch(0.65 0 0);
+  --scrollbar-track-ui: oklch(0.94 0 0);
+  --scrollbar-thumb-ui: oklch(0.75 0 0);
+  --scrollbar-thumb-hover-ui: oklch(0.65 0 0);
 
   /* ========================================
      SHADOWS & ELEVATION
      ======================================== */
 
-  --shadow-sm: 0 1px 2px 0 oklch(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -2px oklch(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -4px oklch(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px oklch(0 0 0 / 0.1), 0 8px 10px -6px oklch(0 0 0 / 0.1);
+  --shadow-sm-ui: 0 1px 2px 0 oklch(0 0 0 / 0.05);
+  --shadow-md-ui: 0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -2px oklch(0 0 0 / 0.1);
+  --shadow-lg-ui: 0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -4px oklch(0 0 0 / 0.1);
+  --shadow-xl-ui: 0 20px 25px -5px oklch(0 0 0 / 0.1), 0 8px 10px -6px oklch(0 0 0 / 0.1);
 
   /* ========================================
      SPACING & SIZING
      ======================================== */
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
+  --radius-sm-ui: 0.25rem;
+  --radius-md-ui: 0.375rem;
+  --radius-lg-ui: 0.5rem;
+  --radius-xl-ui: 0.75rem;
+  --radius-2xl-ui: 1rem;
 
   /* ========================================
      TYPOGRAPHY
      ======================================== */
 
-  --font-sans:
+  --font-sans-ui:
     "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono-ui: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }

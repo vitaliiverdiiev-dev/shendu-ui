@@ -48,7 +48,7 @@ const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordProps>(
         size="icon"
         className={cn(
           ICON_CONTAINER_INTERACTIVE,
-          'text-muted-foreground hover:text-foreground right-0 hover:bg-transparent',
+          'text-muted-foreground-ui hover:text-foreground-ui right-0 hover:bg-transparent',
           iconWidth,
           disabled && 'pointer-events-none opacity-50'
         )}

@@ -44,7 +44,7 @@ export const avatarFallbackVariants = cva('bg-blue-100 font-medium text-blue-600
   },
 });
 
-export const nameVariants = cva('text-foreground font-medium', {
+export const nameVariants = cva('text-foreground-ui font-medium', {
   variants: {
     size: {
       sm: 'text-xs',
@@ -57,7 +57,7 @@ export const nameVariants = cva('text-foreground font-medium', {
   },
 });
 
-export const emailVariants = cva('text-muted-foreground', {
+export const emailVariants = cva('text-muted-foreground-ui', {
   variants: {
     size: {
       sm: 'text-[10px]',
@@ -86,7 +86,7 @@ export const roleBadgeVariants = cva(
   }
 );
 
-export const chevronVariants = cva('text-muted-foreground shrink-0', {
+export const chevronVariants = cva('text-muted-foreground-ui shrink-0', {
   variants: {
     size: {
       sm: 'h-3 w-3',

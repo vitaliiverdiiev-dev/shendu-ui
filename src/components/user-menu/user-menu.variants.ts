@@ -5,7 +5,7 @@ export const menuItemVariants = cva(
   {
     variants: {
       variant: {
-        default: 'text-foreground focus:bg-accent focus:text-accent-foreground',
+        default: 'text-foreground-ui focus:bg-accent-ui focus:text-accent-foreground-ui',
         destructive: 'text-red-600 focus:bg-red-50 focus:text-red-600 dark:focus:bg-red-900/20',
       },
     },
@@ -18,7 +18,7 @@ export const menuItemVariants = cva(
 export const menuItemIconVariants = cva('h-4 w-4 shrink-0', {
   variants: {
     variant: {
-      default: 'text-muted-foreground',
+      default: 'text-muted-foreground-ui',
       destructive: 'text-red-600',
     },
   },

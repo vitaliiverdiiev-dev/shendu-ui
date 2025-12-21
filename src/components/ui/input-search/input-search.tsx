@@ -62,7 +62,7 @@ const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
         size="icon"
         className={cn(
           ICON_CONTAINER_INTERACTIVE,
-          'text-destructive hover:text-destructive/80 right-0 hover:bg-transparent',
+          'text-destructive-ui hover:text-destructive-ui/80 right-0 hover:bg-transparent',
           iconWidth,
           disabled && 'pointer-events-none opacity-50'
         )}

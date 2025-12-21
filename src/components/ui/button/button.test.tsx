@@ -20,13 +20,13 @@ describe('Button', () => {
     it('applies default variant classes', () => {
       render(<Button variant="default">Default</Button>);
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('bg-primary');
+      expect(button).toHaveClass('bg-primary-ui');
     });
 
     it('applies destructive variant classes', () => {
       render(<Button variant="destructive">Delete</Button>);
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('bg-destructive');
+      expect(button).toHaveClass('bg-destructive-ui');
     });
 
     it('applies outline variant classes', () => {
@@ -38,13 +38,13 @@ describe('Button', () => {
     it('applies secondary variant classes', () => {
       render(<Button variant="secondary">Secondary</Button>);
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('bg-secondary');
+      expect(button).toHaveClass('bg-secondary-ui');
     });
 
     it('applies ghost variant classes', () => {
       render(<Button variant="ghost">Ghost</Button>);
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('hover:bg-accent');
+      expect(button).toHaveClass('hover:bg-accent-ui');
     });
 
     it('applies link variant classes', () => {
