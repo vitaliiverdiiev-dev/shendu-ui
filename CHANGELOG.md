@@ -1,5 +1,11 @@
 # @shendu-ui/core
 
+## 0.3.3
+
+### Patch Changes
+
+- update CSS vars to be UI Kit vars only
+
 ## 0.3.2
 
 ### Patch Changes
