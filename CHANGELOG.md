@@ -1,5 +1,23 @@
 # @shendu-ui/core
 
+## 0.3.6
+
+### Patch Changes
+
+- vite config fix
+
+## 0.3.5
+
+### Patch Changes
+
+- css variables only
+
+## 0.3.4
+
+### Patch Changes
+
+- css variables update in order not to overwrite other styles in apps
+
 ## 0.3.3
 
 ### Patch Changes
