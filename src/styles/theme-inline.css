@@ -18,6 +18,17 @@
   --color-accent-ui: var(--accent-ui);
   --color-accent-foreground-ui: var(--accent-foreground-ui);
   --color-destructive-ui: var(--destructive-ui);
+  --color-destructive-foreground-ui: var(--destructive-foreground-ui);
+  --color-destructive-border-ui: var(--destructive-border-ui);
+  --color-warning-ui: var(--warning-ui);
+  --color-warning-foreground-ui: var(--warning-foreground-ui);
+  --color-warning-border-ui: var(--warning-border-ui);
+  --color-success-ui: var(--success-ui);
+  --color-success-foreground-ui: var(--success-foreground-ui);
+  --color-success-border-ui: var(--success-border-ui);
+  --color-info-ui: var(--info-ui);
+  --color-info-foreground-ui: var(--info-foreground-ui);
+  --color-info-border-ui: var(--info-border-ui);
   --color-border-ui: var(--border-ui);
   --color-input-ui: var(--input-ui);
   --color-ring-ui: var(--ring-ui);

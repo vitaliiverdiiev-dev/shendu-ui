@@ -20,43 +20,43 @@ describe('Badge', () => {
     it('applies default variant classes', () => {
       render(<Badge variant="default">Default</Badge>);
       const badge = screen.getByText('Default');
-      expect(badge).toHaveClass('bg-primary', 'text-primary-foreground');
+      expect(badge).toHaveClass('bg-primary-ui', 'text-primary-foreground-ui');
     });
 
     it('applies secondary variant classes', () => {
       render(<Badge variant="secondary">Secondary</Badge>);
       const badge = screen.getByText('Secondary');
-      expect(badge).toHaveClass('bg-secondary', 'text-secondary-foreground');
+      expect(badge).toHaveClass('bg-secondary-ui', 'text-secondary-foreground-ui');
     });
 
     it('applies destructive variant classes', () => {
       render(<Badge variant="destructive">Destructive</Badge>);
       const badge = screen.getByText('Destructive');
-      expect(badge).toHaveClass('bg-destructive', 'text-destructive-foreground');
+      expect(badge).toHaveClass('bg-destructive-ui', 'text-destructive-foreground-ui');
     });
 
     it('applies warning variant classes', () => {
       render(<Badge variant="warning">Warning</Badge>);
       const badge = screen.getByText('Warning');
-      expect(badge).toHaveClass('bg-warning', 'text-warning-foreground');
+      expect(badge).toHaveClass('bg-warning-ui', 'text-warning-foreground-ui');
     });
 
     it('applies success variant classes', () => {
       render(<Badge variant="success">Success</Badge>);
       const badge = screen.getByText('Success');
-      expect(badge).toHaveClass('bg-success', 'text-success-foreground');
+      expect(badge).toHaveClass('bg-success-ui', 'text-success-foreground-ui');
     });
 
     it('applies info variant classes', () => {
       render(<Badge variant="info">Info</Badge>);
       const badge = screen.getByText('Info');
-      expect(badge).toHaveClass('bg-info', 'text-info-foreground');
+      expect(badge).toHaveClass('bg-info-ui', 'text-info-foreground-ui');
     });
 
     it('applies outline variant classes', () => {
       render(<Badge variant="outline">Outline</Badge>);
       const badge = screen.getByText('Outline');
-      expect(badge).toHaveClass('text-foreground');
+      expect(badge).toHaveClass('text-foreground-ui');
     });
   });
 
@@ -73,7 +73,7 @@ describe('Badge', () => {
         </Badge>
       );
       const badge = screen.getByText('Secondary Badge');
-      expect(badge).toHaveClass('bg-secondary', 'text-secondary-foreground', 'text-xs');
+      expect(badge).toHaveClass('bg-secondary-ui', 'text-secondary-foreground-ui', 'text-xs');
     });
   });
 

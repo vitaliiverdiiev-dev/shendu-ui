@@ -147,15 +147,15 @@ export const AllSizes: Story = {
   render: () => (
     <div className="flex flex-col gap-6">
       <div>
-        <p className="text-muted-foreground mb-2 text-sm">Small</p>
+        <p className="text-muted-foreground-ui mb-2 text-sm">Small</p>
         <UserInfo user={defaultUser} size="sm" showChevron />
       </div>
       <div>
-        <p className="text-muted-foreground mb-2 text-sm">Default</p>
+        <p className="text-muted-foreground-ui mb-2 text-sm">Default</p>
         <UserInfo user={defaultUser} size="default" showChevron />
       </div>
       <div>
-        <p className="text-muted-foreground mb-2 text-sm">Large</p>
+        <p className="text-muted-foreground-ui mb-2 text-sm">Large</p>
         <UserInfo user={defaultUser} size="lg" showChevron />
       </div>
     </div>

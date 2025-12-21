@@ -125,7 +125,7 @@ export const Controlled: Story = {
     return (
       <div className="flex flex-col gap-2">
         <InputPassword placeholder="Enter password" visible={visible} onVisibilityChange={setVisible} />
-        <p className="text-muted-foreground text-sm">Password is {visible ? 'visible' : 'hidden'}</p>
+        <p className="text-muted-foreground-ui text-sm">Password is {visible ? 'visible' : 'hidden'}</p>
       </div>
     );
   },

@@ -181,16 +181,18 @@ export const StateColors: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap gap-2">
-        <Badge className="bg-destructive text-destructive-foreground border-destructive">Destructive</Badge>
-        <Badge className="bg-warning text-warning-foreground border-warning">Warning</Badge>
-        <Badge className="bg-success text-success-foreground border-success">Success</Badge>
-        <Badge className="bg-info text-info-foreground border-info">Info</Badge>
+        <Badge className="bg-destructive-ui text-destructive-foreground-ui border-destructive-ui">Destructive</Badge>
+        <Badge className="bg-warning-ui text-warning-foreground-ui border-warning-ui">Warning</Badge>
+        <Badge className="bg-success-ui text-success-foreground-ui border-success-ui">Success</Badge>
+        <Badge className="bg-info-ui text-info-foreground-ui border-info-ui">Info</Badge>
       </div>
       <div className="flex flex-wrap gap-2">
-        <Badge className="border-destructive text-destructive-foreground bg-transparent">Destructive Outline</Badge>
-        <Badge className="border-warning text-warning-foreground bg-transparent">Warning Outline</Badge>
-        <Badge className="border-success text-success-foreground bg-transparent">Success Outline</Badge>
-        <Badge className="border-info text-info-foreground bg-transparent">Info Outline</Badge>
+        <Badge className="border-destructive-ui text-destructive-foreground-ui bg-transparent">
+          Destructive Outline
+        </Badge>
+        <Badge className="border-warning-ui text-warning-foreground-ui bg-transparent">Warning Outline</Badge>
+        <Badge className="border-success-ui text-success-foreground-ui bg-transparent">Success Outline</Badge>
+        <Badge className="border-info-ui text-info-foreground-ui bg-transparent">Info Outline</Badge>
       </div>
     </div>
   ),
@@ -199,19 +201,19 @@ export const StateColors: Story = {
 export const StateColorsWithIcons: Story = {
   render: () => (
     <div className="flex flex-wrap gap-2">
-      <Badge className="bg-destructive text-destructive-foreground border-destructive">
+      <Badge className="bg-destructive-ui text-destructive-foreground-ui border-destructive-ui">
         <span>✕</span>
         Error
       </Badge>
-      <Badge className="bg-warning text-warning-foreground border-warning">
+      <Badge className="bg-warning-ui text-warning-foreground-ui border-warning-ui">
         <span>⚠</span>
         Warning
       </Badge>
-      <Badge className="bg-success text-success-foreground border-success">
+      <Badge className="bg-success-ui text-success-foreground-ui border-success-ui">
         <span>✓</span>
         Success
       </Badge>
-      <Badge className="bg-info text-info-foreground border-info">
+      <Badge className="bg-info-ui text-info-foreground-ui border-info-ui">
         <span>ℹ</span>
         Info
       </Badge>
