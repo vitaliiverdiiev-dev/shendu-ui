@@ -1,0 +1,12 @@
+/*
+ * Shendu UI Theme Variables Only
+ * Use this file when importing shendu-ui into a project that already has Tailwind configured.
+ * This file only contains the CSS variables with -ui suffix to prevent conflicts.
+ */
+
+@import "./root.css";
+@import "./theme-light.css";
+@import "./theme-dark.css";
+@import "./theme-inline.css";
+
+@custom-variant dark (&:is(.dark *));
