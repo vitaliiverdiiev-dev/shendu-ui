@@ -1,8 +1,29 @@
-import path from 'path';
+import { copyFileSync, existsSync, mkdirSync } from 'node:fs';
+import path from 'node:path';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+
+// Plugin to copy the theme-only CSS file after build
+const copyThemeOnlyPlugin = () => ({
+  name: 'copy-theme-only',
+  closeBundle() {
+    const srcPath = path.resolve(__dirname, 'src/styles/theme-only.css');
+    const destDir = path.resolve(__dirname, 'dist');
+    const destPath = path.resolve(destDir, 'theme.css');
+
+    if (!existsSync(destDir)) {
+      mkdirSync(destDir, { recursive: true });
+    }
+
+    if (existsSync(srcPath)) {
+      copyFileSync(srcPath, destPath);
+      // eslint-disable-next-line no-console
+      console.info('✓ Copied theme-only.css to dist/theme.css');
+    }
+  },
+});
 
 export default defineConfig({
   plugins: [
@@ -12,6 +33,7 @@ export default defineConfig({
       tsconfigPath: './tsconfig.lib.json',
       insertTypesEntry: true,
     }),
+    copyThemeOnlyPlugin(),
   ],
   resolve: {
     alias: {

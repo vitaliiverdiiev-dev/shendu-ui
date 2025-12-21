@@ -37,6 +37,7 @@
       }
     },
     "./styles.css": "./dist/core.css",
+    "./theme.css": "./dist/theme.css",
     "./components/*": {
       "import": {
         "types": "./dist/components-*.d.ts",
